@@ -1,14 +1,22 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import {
+  FIREBASE_API_KEY,
+  FIREBASE_AUTH_DOMAIN,
+  FIREBASE_PROJECT_ID,
+  STORAGE_BUCKET,
+  MESSAGING_SENDER_ID,
+  APP_ID  
+} from "@env";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBjCuV6wOoPquE7b1ACn48hiHgOVHSjAkg",
-  authDomain: "todoapp.firebaseapp.com",
-  projectId: "todoapp-adc5e",
-  storageBucket: "todoapp-adc5e.firebasestorage.app",
-  messagingSenderId: "878638099277",
-  appId: "1:878638099277:android:272b986318030bd66ce504"
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
+  appId: APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
